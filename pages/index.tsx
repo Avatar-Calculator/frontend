@@ -2,11 +2,13 @@ import axios from 'axios'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { Analytics, getAnalytics, logEvent } from 'firebase/analytics'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 import { avatarsArrayToMap, calculatePrice } from '../comps/calculator'
 import { pricesInterface } from '../comps/DTO'
+import Footer from '../comps/footer'
 import Navbar from '../comps/navbar'
 import Details from '../comps/portfolio_details'
 import WalletAddress from '../comps/wallet_address'
@@ -98,9 +100,7 @@ function Home() {
           <div className="container is-flex is-flex-direction-column is-align-items-center">
             <h1 className="title">What&apos;s my avatar portfolio worth?</h1>
             <article className="message">
-              <div className="message-header subtitle">
-                <p>If you found this tool useful, consider supporting this project: <span className="has-background-light has-text-dark p-2 padded">0x3bcdA61F0dd6D571134BDDf2AE0CBB0F55021f42</span></p>
-              </div>
+
               <div className="message-body subtitle">
                 <WalletAddress submit={submit} />
                 <div className="portfolio mt-3">
@@ -111,9 +111,7 @@ function Home() {
                         "$" + (amount * conversion).toFixed(2) + " USD"
                     }</p>
                     <p className="my-2"><strong>Last Sync At:</strong> {lastSync}</p>
-                    <p>This site is now avatarcalculator.com. Be sure to spread the word!</p>
-                    <p>NOTE: IT HAS COME TO MY ATTENTION THAT SCAMMERS ARE USING THIS SITE TO MAKE THEIR WELCOME POSTS SEEM LEGITIMATE - MODS WILL NEVER LINK YOU TO THIS SITE. IF YOU&apos;RE NOT SURE IF YOU&apos;RE BEING SCAMMED - SEND /u/Nanoburste A MESSAGE.</p>
-                    <p>EXAMPLES OF THESE SCAMS CAN BE SEEN <a href="https://www.reddit.com/r/avatartrading/comments/ydh6ne/hey_noobs_here_is_an_example_of_something_you/">HERE</a> AND <a href="https://www.reddit.com/r/avatartrading/comments/ydsczg/got_a_warm_welcome_from_scammer_dont_accept_dm/">HERE</a>.</p>
+                    <p>If you're new, please stay safe and understand this app by reading the <Link href="/view/faq">FAQ</Link>.</p>
                   </div>
                   <div className="parameters">
                     <div className="field has-addons">
@@ -150,10 +148,7 @@ function Home() {
             <Details avatars={avatars as Map<string, number>} prices={prices as pricesInterface} generation={generationFilter} ethActive={ethActive} conversion={conversion} metric={floorPriceActive ? "floor_price" : "last_sale"} />
           </div>
         </div>
-        <div className="hero-foot">
-          <p className="has-text-centered">If your company is hiring new grads, message me :)</p>
-          <p className="has-text-centered">This site is neither a creation of, nor an affiliation with Reddit, and OpenSea.</p>
-        </div>
+        <Footer />
       </div>
     </div>
   )

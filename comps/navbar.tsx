@@ -52,9 +52,20 @@ function Navbar(props : Props) {
                 </a>
             </div>
             <div className={mobileActive ? "is-active navbar-menu" : "navbar-menu"}>
+                <div className="navbar-start">
+                    <a className="navbar-item img" target="_blank" href="https://discord.gg/JXnY3w3SXM">
+                        <img src="/discord.svg" width="30px" height="30px" />
+                        <span>Discord</span>
+                    </a>
+                </div>
                 {
                     user ?
                     <div className="navbar-end">
+                        <Link href="/view/donate">
+                            <a className="navbar-item mr-4">
+                                Donate
+                            </a>
+                        </Link>
                         <Link href="/account/settings">
                             <a className="navbar-item mr-4">
                                 Settings
@@ -71,6 +82,11 @@ function Navbar(props : Props) {
                         <Link href="/view/faq">
                             <a className="navbar-item mr-4">
                                 FAQ
+                            </a>
+                        </Link>
+                        <Link href="/view/donate">
+                            <a className="navbar-item mr-4">
+                                Donate
                             </a>
                         </Link>
                         <div className="navbar-item">
