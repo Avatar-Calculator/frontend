@@ -34,7 +34,7 @@ function FAQ() {
                 <p className="has-text-justified">No.</p>
                 <br />
                 <h2 className="subtitle">Why should I donate, what are the donations used for?</h2>
-                <p className="has-text-justified">The donations will help with developing the application! I'm currently a part time college student dedicating between 20-40 hours/week minimum on this project. The donations will be used to help improve the infrastructure 
+                <p className="has-text-justified">The donations will help with developing the application! I&apos;m currently a part time college student dedicating between 20-40 hours/week minimum on this project. The donations will be used to help improve the infrastructure 
                   of the application as well as some compensation for my development. Please visit the <Link href="/view/donate">donation page</Link> for more info.</p>
                 <br />
                 <h2 className="subtitle">I have some problems or suggestions and this didn&apos;t help me.</h2>

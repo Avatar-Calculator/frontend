@@ -2,6 +2,7 @@ import axios from 'axios'
 import { User } from 'firebase/auth'
 import { Analytics, getAnalytics, logEvent } from 'firebase/analytics'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 
@@ -107,6 +108,7 @@ function Dashboard() {
                                             "$" + (amount * conversion).toFixed(2) + " USD"
                                         }</p>
                                         <p className="my-2"><strong>Last Sync At:</strong> {lastSync}</p>
+                                        <Link href="/view/donate">Donate</Link>
                                     </div>
                                     <div className="parameters">
                                         <div className="field has-addons">

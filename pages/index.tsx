@@ -111,7 +111,8 @@ function Home() {
                         "$" + (amount * conversion).toFixed(2) + " USD"
                     }</p>
                     <p className="my-2"><strong>Last Sync At:</strong> {lastSync}</p>
-                    <p>If you're new, please stay safe and understand this app by reading the <Link href="/view/faq">FAQ</Link>.</p>
+                    <Link href="/view/donate">Donate</Link>
+                    <p>If you&apos;re new, please stay safe and understand this app by reading the <Link href="/view/faq">FAQ</Link>.</p>
                   </div>
                   <div className="parameters">
                     <div className="field has-addons">
