@@ -8,3 +8,13 @@ export interface pricesInterface {
         hyperlink: string 
     }
 };
+
+export interface timesereiesInterface { 
+    [key:string]: timeseriesUnitInterface[]
+}
+
+export interface timeseriesUnitInterface {
+    floor_price: number,
+    last_sale: number,
+    createdAt: Date
+}

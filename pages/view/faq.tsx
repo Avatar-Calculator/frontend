@@ -28,7 +28,7 @@ function FAQ() {
                 <br />
                 <h2 className="subtitle">The portfolio value that I was given isn&apos;t what I should have.</h2>
                 <p className="has-text-justified">First of all, check the details of your portfolio. If you transfered any avatars in the last day and it isn&apos;t showing up right away, that&apos;s completely normal because this app uses caching to stay low on costs and 
-                  high on performance. Wallets are currently cached for 12 hours by default. If this is not the issue, please notify me on the <a href="https://discord.gg/JXnY3w3SXM">Discord server</a>.</p>
+                  high on performance. Wallets are currently cached for 12 hours by default. If this is not the issue, please notify me on the <a href="https://discord.gg/2JEcTWQkUp">Discord server</a>.</p>
                 <br />
                 <h2 className="subtitle">Does this app also calculate the WETH / MATIC / MOONS / BRICKS that is in my wallet?</h2>
                 <p className="has-text-justified">No.</p>
@@ -38,7 +38,7 @@ function FAQ() {
                   of the application as well as some compensation for my development. Please visit the <Link href="/view/donate">donation page</Link> for more info.</p>
                 <br />
                 <h2 className="subtitle">I have some problems or suggestions and this didn&apos;t help me.</h2>
-                <p className="has-text-justified">Please join the <a href="https://discord.gg/JXnY3w3SXM">Discord server</a> and let me know!</p>
+                <p className="has-text-justified">Please join the <a href="https://discord.gg/2JEcTWQkUp">Discord server</a> and let me know!</p>
               </div>
             </div>
             <Footer />
