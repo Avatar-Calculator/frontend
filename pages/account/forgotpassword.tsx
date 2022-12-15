@@ -41,25 +41,25 @@ function ForgotPassword() {
             <Head>
                 <title>Reset Password</title>
             </Head>
-            <div className="hero is-fullheight">
+            <div className="hero">
                 <div className="hero-body">
-                    <div className="container is-flex is-flex-direction-column">
+                    <div className="container flex-column">
                         <Link href="/">
                             <a>Back to Home Page</a>
                         </Link>
                         <h1 className="title">Forgot your password?</h1>
-                        <p className="subtitle">Enter the email address associated with your account and we&apos;ll send a link to reset your password.</p>
+                        <p>Enter the email address associated with your account and we&apos;ll send a link to reset your password.</p>
 
                         {
                             success ?
-                            <label className="has-text-success">Email successfully sent.</label> 
+                            <label className="success-text">Email successfully sent.</label> 
                             :
                             <span />
                         }
 
                         {
                             err ?
-                            <label className="has-text-danger">Request unsuccessful. Please try again.</label> 
+                            <label className="error-text">Request unsuccessful. Please try again.</label> 
                             :
                             <span />
                         }
@@ -71,10 +71,10 @@ function ForgotPassword() {
                             </div>
                         </div>
 
-                        <p className="is-align-self-flex-end">Remember your password? <Link href="/account/login"><a>Login</a></Link></p>
+                        <p className="self-end">Remember your password? <Link href="/account/login"><a>Login</a></Link></p>
 
-                        <div className="is-align-self-center">
-                            <button className="button is-dark" onClick={() => sendReset(email)}>Send password reset</button>
+                        <div className="self-center">
+                            <button className="button is-primary-blue" onClick={() => sendReset(email)}>Send password reset</button>
                         </div>
                     </div>
                 </div>

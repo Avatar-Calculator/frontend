@@ -49,9 +49,9 @@ function Join() {
             <Head>
                 <title>Register</title>
             </Head>
-            <div className="hero is-fullheight">
+            <div className="hero">
                 <div className="hero-body">
-                    <div className="container is-flex is-flex-direction-column">
+                    <div className="container flex-column">
                         <Link href="/">
                             <a>Back to Home Page</a>
                         </Link>
@@ -80,13 +80,13 @@ function Join() {
                             </div>
                         </div>
 
-                        <p className="is-align-self-flex-end">Already have an account? <Link href="/account/login"><a>Login</a></Link></p>
+                        <p className="self-end">Already have an account? <Link href="/account/login"><a>Login</a></Link></p>
 
-                        <div className="is-align-self-center">
-                            <button className="button is-dark" onClick={() => handleEmailPassAccountCreation(email, password, password2)}>Join</button>
+                        <div className="self-center">
+                            <button className="button is-primary-blue" onClick={() => handleEmailPassAccountCreation(email, password, password2)}>Join</button>
                         </div>
 
-                        <p className="is-align-self-center">Reddit wallet accounts can be added in the settings page.</p>
+                        <p className="has-text-centered">Reddit wallet accounts can be added in the settings page.</p>
                     </div>
                 </div>
             </div>

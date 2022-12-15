@@ -47,18 +47,18 @@ function Login() {
             <Head>
                 <title>Login</title>
             </Head>
-            <div className="hero is-fullheight">
+            <div className="hero">
                 <div className="hero-body">
-                    <div className="container is-flex is-flex-direction-column">
+                    <div className="container flex-column">
                         <Link href="/">
                             <a>Back to Home Page</a>
                         </Link>
                         <h1 className="title">Login</h1>
-                        <div className="is-align-self-center">
+                        <div className="self-center">
                             <button className="google-btn" onClick = {() => federatedLogIn(googleProvider)} type="button">Sign in with Google</button>
                         </div>
-                        <p className="is-align-self-center">OR</p>
-                        { err ? <label className="is-align-self-center has-text-danger">Login unsuccessful. Please try again.</label> : <span /> }
+                        <p className="self-center">OR</p>
+                        { err ? <label className="self-center error-text">Login unsuccessful. Please try again.</label> : <span /> }
                         
                         <div className="field">
                             <label className="label">Email</label>
@@ -74,13 +74,13 @@ function Login() {
                             </div>
                         </div>
 
-                        <p className="is-align-self-flex-end"><Link href="/account/forgotpassword"><a>Forgot Password?</a></Link></p>
+                        <p className="self-end"><Link href="/account/forgotpassword"><a>Forgot Password?</a></Link></p>
                 
-                        <div className="is-align-self-center">
-                            <button className="button is-dark" onClick = {() => {signIn(email, password)}}>Sign In</button>
+                        <div className="self-center">
+                            <button className="button is-primary-blue" onClick = {() => {signIn(email, password)}}>Sign In</button>
                         </div>
                         
-                        <p className="is-align-self-flex-end">Don&apos;t have an account? <Link href="/account/join"><a>Join</a></Link></p>
+                        <p className="self-end">Don&apos;t have an account? <Link href="/account/join"><a>Join</a></Link></p>
                     </div>
                 </div>
             </div>
