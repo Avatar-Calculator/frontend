@@ -324,6 +324,16 @@ th, td {
     }
 }
 
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: 90vw;
+    @media (min-width: 1080px) {
+        width: 1080px;
+    }
+}
+
 //LAYOUT
 .container {
     padding: 2vh 5vw;

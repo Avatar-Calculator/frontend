@@ -68,7 +68,11 @@ function Chart(props: Props) {
     ],
   };
 
-  return <Line options={options} data={data} />;
+  return (
+    <div className="chart-container">
+      <Line options={options} data={data} />
+    </div>
+  );
 }
 
 export default Chart;
