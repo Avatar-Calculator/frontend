@@ -3,9 +3,9 @@ import Head from "next/head";
 import { FormEvent, useEffect, useState } from "react";
 
 import Chart from "../../comps/chart";
-import { timesereiesInterface } from "../../comps/DTO";
 import Navbar from "../../comps/navbar";
 import Footer from "../../comps/footer";
+import { timesereiesInterface } from "@utils/DTO";
 
 function Charts() {
   const [timeseries, setTimeseries] = useState<timesereiesInterface>();

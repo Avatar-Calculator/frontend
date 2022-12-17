@@ -4,7 +4,7 @@ type Props = {
     submit(wallet: string): Promise<void>;
 }
 
-function WalletAddress(props: Props) {
+function PortfolioAddress(props: Props) {
     const [oldWallet, setOldWallet] = useState<string>('');
     const [wallet, setWallet] = useState<string>('');
     const [buttonLoading, setButtonLoading] = useState<boolean>(false);
@@ -69,12 +69,12 @@ function WalletAddress(props: Props) {
     }
 
     return (
-        <div>
+        <div className="portfolio-address">
             <label className="label">Wallet Address</label>
             <form className="field is-grouped" onSubmit={(e) => submit(e)}>
                 <div className="control is-expanded has-icons-right">
                     <input className="input" type="text" list="favourites" value={wallet} onChange={(e) => {updateWallet(e.target.value)}} />
-                    <span className="icon is-right p-2 star" onClick={() => toggleFavourite()}>
+                    <span className="icon is-right star" onClick={() => toggleFavourite()}>
                         <Star active={favourite} />
                     </span>
                     <datalist id="favourites">
@@ -88,9 +88,9 @@ function WalletAddress(props: Props) {
                 <div className="control">
                     {
                         buttonLoading ?
-                        <button className="button is-dark is-loading">Submit</button>
+                        <button className="button is-primary-blue is-loading">Submit</button>
                         :
-                        <button className="button is-dark" type="submit">Submit</button>
+                        <button className="button is-primary-blue" type="submit">Submit</button>
                     }
                 </div>
             </form>
@@ -115,4 +115,4 @@ function Star(props: { active: boolean; }) {
     )
 }
 
-export default WalletAddress;
+export default PortfolioAddress;

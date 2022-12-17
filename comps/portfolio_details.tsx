@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { pricesInterface } from './DTO'
+import { pricesInterface } from '@utils/DTO'
 
 type Props = {
     avatars: Map<string, number>;
@@ -11,7 +11,7 @@ type Props = {
     metric: "floor_price" | "last_sale";
 }
 
-function Details(props: Props) {
+function PortfolioDetails(props: Props) {
     const [show, setShow] = useState(false);
     const [avatars, setAvatars] = useState<any[]>([]);
     const [sortBy, setSortBy] = useState<string>("default");
@@ -90,28 +90,25 @@ function Details(props: Props) {
     if(show && props.avatars !== undefined && props.prices !== undefined)
     {
         return (
-            <div className="is-flex is-flex-direction-column">
-                <div className="is-align-self-center">
-                    <button className="button is-dark" onClick={() => setShow(false)}>Hide List</button>
+            <div className="portfolio-details">
+                <div className="self-center">
+                    <button className="button is-primary-blue" onClick={() => setShow(false)}>Hide List</button>
                 </div>
-                <div className="parameters">
-                    <div className="is-flex is-align-items-center">
-                        <p className="mr-2 is-size-6">Sort By:</p>
-                        <div className="select is-small">
-                            <select onChange={(el) => setSortBy(el.target.value)}>
-                                <option value="default">Alphabetically A-Z</option>
-                                <option value="price_high">Price High to Low</option>
-                                <option value="price_low">Price Low to High</option>
-                                <option value="total_price_high">Total Price High to Low</option>
-                                <option value="total_price_low">Total Price Low to High</option>
-                                <option value="change_high">Change (+ve to -ve)</option>
-                                <option value="change_low">Change (-ve to +ve)</option>
-                            </select>
-                        </div>
+                <div className="sort-by">
+                    <p>Sort By:</p>
+                    <div className="select is-small">
+                        <select onChange={(el) => setSortBy(el.target.value)}>
+                            <option value="default">Alphabetically A-Z</option>
+                            <option value="price_high">Price High to Low</option>
+                            <option value="price_low">Price Low to High</option>
+                            <option value="total_price_high">Total Price High to Low</option>
+                            <option value="total_price_low">Total Price Low to High</option>
+                            <option value="change_high">Change (+ve to -ve)</option>
+                            <option value="change_low">Change (-ve to +ve)</option>
+                        </select>
                     </div>
                 </div>
-                
-                <table className="table is-bordered is-striped is-narrow my-4">
+                <table className="table is-bordered is-striped is-narrow">
                     <thead>
                         <tr>
                             <th>Avatar</th>
@@ -152,10 +149,14 @@ function Details(props: Props) {
     }
     else {
         return (
-            <button className="button is-dark" onClick={() => setShow(true)}>Show List</button>
+            <div className="portfolio-details">
+                <div className="self-center">
+                    <button className="button is-primary-blue" onClick={() => setShow(true)}>Show List</button>
+                </div>
+            </div>
         )
     }
     
 }
 
-export default Details;
+export default PortfolioDetails;

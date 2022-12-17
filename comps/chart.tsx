@@ -10,7 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-import { timeseriesUnitInterface } from "./DTO";
+import { timeseriesUnitInterface } from "@utils/DTO";
 
 ChartJS.register(
   CategoryScale,
