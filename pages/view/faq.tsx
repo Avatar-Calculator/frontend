@@ -25,14 +25,14 @@ function FAQ() {
                   sales option is calculated using the average of the last 3 sales from that kind of avatar. By taking the average of the last 3, fluctuations in prices that may arise from other factors such as low mint, overmint, etc, are smoothed.</p>
                 <h2 className="subtitle">The portfolio value that I was given isn&apos;t what I should have.</h2>
                 <p className="has-text-justified">First of all, check the details of your portfolio. If you transfered any avatars in the last day and it isn&apos;t showing up right away, that&apos;s completely normal because this app uses caching to stay low on costs and 
-                  high on performance. Wallets are currently cached for 12 hours by default. If this is not the issue, please notify me on the <a href="https://discord.gg/2JEcTWQkUp">Discord server</a>.</p>
+                  high on performance. Wallets are currently cached for 12 hours by default. If this is not the issue, please notify me on the <a href="https://discord.gg/sX7YastKKX">Discord server</a>.</p>
                 <h2 className="subtitle">Does this app also calculate the WETH / MATIC / MOONS / BRICKS that is in my wallet?</h2>
                 <p className="has-text-justified">No.</p>
                 <h2 className="subtitle">Why should I donate, what are the donations used for?</h2>
                 <p className="has-text-justified">The donations will help with developing the application! I&apos;m currently a part time college student dedicating between 20-40 hours/week minimum on this project. The donations will be used to help improve the infrastructure 
                   of the application as well as some compensation for my development. Please visit the <Link href="/view/donate">donation page</Link> for more info.</p>
                 <h2 className="subtitle">I have some problems or suggestions and this didn&apos;t help me.</h2>
-                <p className="has-text-justified">Please join the <a href="https://discord.gg/2JEcTWQkUp">Discord server</a> and let me know!</p>
+                <p className="has-text-justified">Please join the <a href="https://discord.gg/sX7YastKKX">Discord server</a> and let me know!</p>
               </div>
             </div>
             <Footer />
