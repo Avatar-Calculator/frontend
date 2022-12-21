@@ -43,6 +43,8 @@ function PortfolioOptions(props: Props) {
                             <option>Generation 1</option>
                             <option>Generation 2</option>
                             <option>Free</option>
+                            <option>Wall Street Bets</option>
+                            <option>Recap 2022</option>
                         </select>
                     </div>
                 </div>
